@@ -13,7 +13,7 @@ const month = fulldate.getMonth()+1;
 const year = fulldate.getFullYear();
 
 app.get("/",function(req,res) {
-    res.render("index.ejs", {
+    res.render("/views/index.ejs", {
         today: date,
         month: month,
         year: year,
@@ -26,7 +26,7 @@ app.listen(3000,() => {
 })
 
 app.post("/home",function(req,res) {
-    res.render("index.ejs",{
+    res.render("/views/index.ejs",{
         today:date,
         month: month,
         year: year,
@@ -34,7 +34,7 @@ app.post("/home",function(req,res) {
 })
 
 app.post("/work",function(req,res) {
-    res.render("work.ejs");
+    res.render("/views/work.ejs");
 })
 
 app.post("/form", function (req, res) {
